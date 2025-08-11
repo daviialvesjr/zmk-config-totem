@@ -22,7 +22,59 @@
 #define TVP2 5
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        left_control {
+            bindings = <&kp LEFT_CONTROL>;
+            key-positions = <13 12>;
+        };
+
+        left_shift {
+            bindings = <&kp LEFT_SHIFT>;
+            key-positions = <12 11>;
+        };
+
+        left_control_shift {
+            bindings = <&kp LS(LEFT_CONTROL)>;
+            key-positions = <11 12 13>;
+        };
+
+        enter {
+            bindings = <&kp ENTER>;
+            key-positions = <2 3 1>;
+        };
+
+        right_control {
+            bindings = <&kp LEFT_CONTROL>;
+            key-positions = <16 17>;
+        };
+
+        right_shift {
+            bindings = <&kp LEFT_SHIFT>;
+            key-positions = <17 18>;
+        };
+
+        right_shift_control {
+            bindings = <&kp LS(LEFT_CONTROL)>;
+            key-positions = <16 17 18>;
+        };
+
+        esc {
+            bindings = <&kp ESC>;
+            key-positions = <6 7 8>;
+        };
+
+        left_bracket {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <27 28>;
+        };
+
+        right_bracket {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <28 29>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
